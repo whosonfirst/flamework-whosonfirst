@@ -40,6 +40,8 @@ if __name__ == "__main__":
     rsp = requests.get(options.remote)
     spec = rsp.content
     spec = spec.strip()
+
+    spec = spec.replace("'", "\\'")
     
     fh.write("<?php\n\n")
     fh.write("        ########################################################################\n\n")
