@@ -41,4 +41,15 @@
 	}
 	
 	########################################################################
+
+	function whosonfirst_sources_get_name_by_prefix($prefix){
+
+		if (! isset($GLOBALS['whosonfirst_sources']['sources'][$prefix])){
+			return $prefix;
+		}
+
+		return $GLOBALS['whosonfirst_sources']['sources'][$prefix]["name"];
+	}
+
+	########################################################################
 	# the end
